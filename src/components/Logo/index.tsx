@@ -1,12 +1,9 @@
 import React from 'react'
 import * as S from './styles'
 import { LogoProps } from 'types/api'
-
+import getImageUrl from 'utils/getImageUrl'
 const Logo = ({ alternativeText, url }: LogoProps) => (
-  <S.LogoWrapper
-    src={`${process.env.NEXT_PUBLIC_IMAGE_HOST}${url}`}
-    alt={alternativeText}
-  />
+  <S.LogoWrapper src={getImageUrl(url)} alt={alternativeText} />
 )
 
 export default Logo
